@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kramo</title>
+  <!--Tipografias de Kramo-->
+  <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+
+    <!--Estilos de Kramo-->
+  <link rel="stylesheet" href="main.css">
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-database.js"></script>
+
+
+  	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.css" />
+
+
+
+
+
+	 https://project-7484915963980617408.firebaseapp.com/__/auth/handler |
+
+
+  <script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "25eac70560382dd7a8cffd489096a8d6335b0bed",
+      authDomain: "project-7484915963980617408.firebaseapp.com",
+      databaseURL: "https://project-7484915963980617408.firebaseio.com/"
+      //storageBucket: "bucket.appspot.com",
+    };
+
+    firebase.initializeApp(config);
+  </script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= yield %>
+<!---<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>-->
+
+
+</body>
+</html>

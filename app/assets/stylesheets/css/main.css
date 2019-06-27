@@ -1,0 +1,85 @@
+ul {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-family: "Passion One", cursive; }
+
+ul li {
+  text-align: center;
+  padding-top: 30px; }
+
+ul li a {
+  color: white;
+  letter-spacing: 1px; }
+
+ul li a:hover {
+  text-decoration: none;
+  color: none; }
+
+ul li a:link {
+  text-decoration: none; }
+
+ul li a:active {
+  text-decoration: none; }
+
+ul li a:visited {
+  text-decoration: none; }
+
+#color-0 {
+  background-color: #000217;
+  height: 16.66667%; }
+
+#color-1 {
+  background-color: #5e0042;
+  height: 16.66667%; }
+
+#color-2 {
+  background-color: #2c2233;
+  height: 16.66667%; }
+
+#color-3 {
+  background-color: #005869;
+  height: 16.66667%; }
+
+#color-4 {
+  background-color: #00856a;
+  height: 16.66667%; }
+
+#color-5 {
+  background-color: #8db500;
+  height: 16.66667%; }
+
+#color-0-bis {
+  background-color: #000217;
+  height: 33.33333%; }
+
+body {
+  font-size: 40px;
+  color: white;
+  height: 100%; }
+
+h1 {
+  color: #e6b098;
+  margin-left: 10px; }
+
+input {
+  background-color: transparent;
+  border: none;
+  width: 25%; }
+
+input[type="text"] {
+  color: white;
+  text-align: center; }
+
+input[type="email"] {
+  color: white;
+  text-align: center; }
+
+input[type="password"] {
+  color: white;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

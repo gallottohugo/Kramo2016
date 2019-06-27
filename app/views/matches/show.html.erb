@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+   		<link rel="stylesheet" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" href="main.css">
+		<title>Kramo</title>
+	</head>
+	<body>
+
+		<div id="color-1" class="col-md-12">Name: <%= @user_match.match.name %></div>
+		<div id="color-2" class="col-md-12">Creator: <%= @user_match.player.email%></div>
+
+		<a href="/matches/<%= @user_match.match.id %>/add_match">¡ Juega Ahora !</a>
+
+	</body>
+</html>
+

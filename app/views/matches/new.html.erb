@@ -1,0 +1,67 @@
+<!DOCTYPE>
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class ="row">
+            <%= form_for(@match) do |n| %>
+                <ul>
+                    <li id="color-1" class="col-md-12">
+                    	<div>
+							<%= n.text_field :name, placeholder:"NOMBRE DE LA PARTIDA" %>
+						</div>
+                    </li>
+
+
+                    <li id="color-1" class="col-md-12">
+                        <div>
+                            <input type="text" placeholder="Cantidad números" id="lenght" name="lenght" />
+                        </div>
+                    </li>
+
+
+                    <li id="color-2" class="col-md-6">
+                    	<div>
+							<%= n.check_box :vs_machine%>
+							<label>
+								MACHINE
+							</label>
+						</div>
+                    </li>
+
+                    <li id="color-3" class="col-md-6">
+                    	<div>
+							<%= n.check_box :vs_player%>
+							<label>
+								PLAYER
+							</label>
+						</div>
+                    </li>
+
+                    <li id="color-4" class="col-md-12">
+                    	<%= n.submit "Nueva partida" %>
+						<%end%>
+                    </li>
+
+                    <li id="color-5" class="col-md-12">
+						<a href="/">Volver</a>
+                    </li>
+                    <li id="color-0" class ="col-md-12"></li>
+                    <li id="color-0" class ="col-md-12"></li>
+               </ul>
+          </div>
+    </body>
+</html> 
+
+		
+		
+
+		
+
+		
+		

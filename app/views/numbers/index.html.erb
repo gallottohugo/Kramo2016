@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="kramo.css">
+<title>Kramo</title>
+</head>
+<body>
+<% if player_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_player_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_player_session_path)  %>  
+  </li>
+<% end %>
+<%= @email %>
+<% @numbers.each do |n| %>
+	<div class = "number-box" > <%= n.number %> </div>
+	<div class = "number-box-mail" > <%= n.player.email %> </div>
+<% end %>
+<a href="/">Volver</a>
+</body>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+   		<link rel="stylesheet" href="main.css">
+		
+		<title>Kramo</title>
+	</head>
+	<body>
+		 <div class="container-fluid">
+		 <div class="row">
+		 	<ul>
+	     		<li id="color-1" class="col-md-12">COMIENCE A JUGAR</li>
+<<<<<<< HEAD
+	     		
+	     		<%= form_for(@number) do |n| %>
+		     		<li id="color-2" class="col-md-12">
+						<%= n.hidden_field :match_id, :value => @match.id %>
+						<%= n.hidden_field :player_number, :value => "true" %>
+						<%= n.text_field :number, placeholder: "ELIJA UN NUMERO", maxlength:"#{@max_length}" %>	
+					</li>
+					
+					<li id="color-3" class="col-md-12">
+		     			<%= n.submit "Siguiente" %>
+	     			</li>
+				<%end%>
+				
+=======
+	     		<li id="color-2" class="col-md-12">
+		     		<%= form_for(@number) do |n| %>
+					<%= n.hidden_field :match_id, :value => @match.id %>
+					<%= n.hidden_field :player_number, :value => "true" %>
+					<%= n.text_field :number, maxlength:"4", placeholder: "ELIJA UN NUMERO"%>	
+				</li>
+				<li id="color-3" class="col-md-12">
+		     		<%= n.submit "Siguiente" %>
+					<%end%>
+				</li>
+>>>>>>> 5cd2c54f5b32c889bf661f4fcfe4ce695007ecb6
+				<li id="color-4" class="col-md-12"></li>
+				<li id="color-4" class="col-md-12"></li>
+				<li id="color-4" class="col-md-12"></li>
+	     	
+	     	</ul>
+
+		</div>
+		</div>
+	</body>
+</html>

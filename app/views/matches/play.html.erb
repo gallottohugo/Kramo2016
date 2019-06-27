@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<script>
+		function isNumberKey(evt){
+		    var charCode = (evt.which) ? evt.which : event.keyCode
+		    if (charCode > 31 && (charCode < 48 || charCode > 57))
+		        return false;
+		    return true;
+		}
+
+        function updateNumbers() {
+            var number = document.getElementById("input_number").value;
+            var match = <%= @current_match %>
+
+			var json_text = '{"number":"'+number+'" , "match":"'+match+'"}';
+			var json_data = JSON.parse(json_text);
+
+			url = "/numbers/new_play_number"
+
+			console.log(json_data)
+			
+
+            $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: json_data,
+                    dataType: 'json',
+                    success: function() {
+                        //hacer un query y mostrar actualizar el listado de numbers y actvar el boton correspondiente
+                    },
+                    error: function() {
+                        //volver a pedir el numer
+                    }
+               });
+
+        }
+        </script>
+	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class ="row">
+                <ul>
+					<li id="color-1" class="col-md-12">PARTIDA CONTRA HAGNR</li>
+					<li id="color-2" class="col-md-12">MI NUMERO: <%= @num_current_user.to_s %></li>
+					<li id="color-3" class="col-md-12">
+					<!-- max lenght deberia llevar una variable modificable cuando creamos la partida o elegimos un modo de juego -->
+						<input type="text", maxlength="4", placeholder= "ELIJE UN NUMERO", name="input_nuplaceholder: "ELIJA UN NUMERO"mber" id="input_number" onkeypress="return isNumberKey(event)"></input>
+					</li>
+					<li id="color-4" class="col-md-12">
+						<a href="#">
+				            <div onclick="updateNumbers()">    
+				                <p>Pregutar</p>
+				            </div>
+				        </a>
+				    </li>
+				    <li id="color-0-bis" class="col-md-12"></li>
+	
+	</body>
+</html>

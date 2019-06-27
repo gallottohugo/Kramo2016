@@ -1,0 +1,29 @@
+<!DOCTYPE>
+
+<html>
+
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class ="row">
+                <ul>
+                <li id="color-1" class="col-md-12">UNETE A UNA PARTIDA</li>
+						<% @matches.each do |m| %>
+							<li id="color-2" class="col-md-12">
+							<a href="/matches/<%=m.match_id%>" style="color:white">
+							<%= m.match.name %> - <%= m.player.email %> <a href="matches/<%= m.match_id %>/add_match">Juega ahora</a>
+							</a>
+						<% end %>
+					</li>
+                <li id="color-0" class="col-md-12">
+					<a href="/">Volver</a>
+				</li>
+
+
+	</body>
+</html>
+
